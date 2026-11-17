@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Tracker</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>My Applications</h2>
+
+            <table>
+                <caption>Job Applications Overview</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Company</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Applied Date</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>R+V</td>
+                        <td>Software Developer</td>
+                        <td>applied</td>
+                        <td>2026-09-01</td>
+                        <td><a href="https://example.com/job-1">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Aareal Bank</td>
+                        <td>IT Intern</td>
+                        <td>interview</td>
+                        <td>2026-09-02</td>
+                        <td><a href="https://example.com/job-2">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>C24 Bank</td>
+                        <td>Web Developer</td>
+                        <td>rejected</td>
+                        <td>2026-09-03</td>
+                        <td><a href="https://example.com/job-3">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>DB Cargo</td>
+                        <td>Software Engineer</td>
+                        <td>ghosted</td>
+                        <td>2026-09-04</td>
+                        <td><a href="https://example.com/job-4">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Computerra</td>
+                        <td>Full-Stack Developer</td>
+                        <td>offer</td>
+                        <td>2026-09-05</td>
+                        <td><a href="https://example.com/job-5">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Add Application</h2>
+
+            <form action="index.html" method="get">
+                <p>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company"
+                           name="company" required>
+                </p>
+
+                <p>
+                    <label for="position">Role:</label>
+                    <input type="text" id="position"
+                           name="position" required>
+                </p>
+
+                <p>
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="">Select status</option>
+                        <option value="applied">Applied</option>
+                        <option value="interview">Interview</option>
+                        <option value="offer">Offer</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="ghosted">Ghosted</option>
+                    </select>
+                </p>
+
+                <div>
+                    <label for="date">Applied Date:</label>
+                    <input type="date" id="date"
+                           name="date" required>
+                </p>
+
+                <p>
+                    <label for="link">Job Link:</label>
+                    <input type="url" id="link" name="link"
+                           placeholder="https://example.com/job">
+                </p>
+
+                <button type="submit">Add Application</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
