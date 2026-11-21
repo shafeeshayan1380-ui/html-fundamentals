@@ -1,0 +1,141 @@
+
+/* Basic Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #b4d7d7;
+    margin: 20px;
+}
+
+header, footer {
+    background-color: #7cc0df;
+    padding: 15px;
+}
+
+section {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+h2, h3 {
+    color: #243b53;
+}
+
+/* Navigation */
+
+nav li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 15px;
+    border: 1px solid #243b53;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+/* Hover and Focus */
+
+a:hover {
+    color: red;
+}
+
+nav a:focus {
+    outline: 3px solid orange;
+    outline-offset: 3px;
+}
+
+/* Pseudo-classes */
+
+.skills li:nth-child(2) {
+    font-style: italic;
+}
+
+.skills li:not(:first-child) {
+    margin-top: 5px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid #243b53;
+}
+/* 5 Conflicts */
+
+
+/* Conflict 1: Source Order
+   Prediction: The second rule wins
+   because both selectors have the
+   same specificity.
+*/
+
+h1 {
+    color: rgb(148, 136, 30);
+}
+
+h1 {
+    color: rgb(18, 20, 152);
+}
+
+
+/* Conflict 2: Class vs Element
+   Prediction: .intro wins because
+   class selectors have higher
+   specificity than element selectors.
+*/
+
+.intro {
+    font-weight: bold;
+}
+
+p {
+    font-weight: normal;
+}
+
+
+/* Conflict 3: Descendant vs Class
+   Prediction: .nav-link wins because
+   a class selector has higher
+   specificity than nav a.
+*/
+
+nav a {
+    text-decoration: underline;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+
+/* Conflict 4: Pseudo-class
+   Prediction: .skills li:first-child
+   wins because it has higher
+   specificity than .skills li.
+*/
+
+.skills li:first-child {
+    background-color: rgb(118, 207, 9);
+}
+
+.skills li {
+    background-color: white;
+}
+
+
+/* Conflict 5: Child Selector
+   Prediction: section > h2 wins
+   because it has higher specificity
+   than the h2 selector.
+*/
+
+section > h2 {
+    letter-spacing: 2px;
+}
+
+h2 {
+    letter-spacing: 0px;
+}
