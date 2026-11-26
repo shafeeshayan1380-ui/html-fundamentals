@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 06 - Box Model</title>
+    <link rel="stylesheet" href="box-model.css">
+</head>
+<body>
+    <main>
+        <section class="demo">
+            <h2>CSS Box Model</h2>
+
+            <h3>1. Content-box</h3>
+            <div class="content-demo">
+                <div class="box outer-box">
+                    Outer Box
+                    <div class="box middle-box">
+                        Middle Box
+                        <div class="box inner-box">Inner Box</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>2. Border-box</h3>
+            <div class="border-demo">
+                <div class="box outer-box">
+                    Outer Box
+                    <div class="box middle-box">
+                        Middle Box
+                        <div class="box inner-box">Inner Box</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h2>Display Examples</h2>
+            <p class="block-example">Block element</p>
+            <p>
+                This is an <span class="inline-example">inline element</span>
+                and an <span class="inline-block-example">inline-block</span>
+                element.
+            </p>
+            <p class="hidden-example">This paragraph is hidden.</p>
+
+            <h3>Overflow</h3>
+            <div class="overflow-box">
+                This box contains more text than the available space.
+                The overflow property allows the content to scroll
+                instead of extending outside the box.
+            </div>
+
+            <h3>Margin Collapsing</h3>
+            <div class="collapse-demo">
+                <p class="collapse-one">First paragraph</p>
+                <p class="collapse-two">Second paragraph</p>
+            </div>
+        </section>
+
+        <p><a href="cv.html">View the centered CV</a></p>
+    </main>
+</body>
+</html>

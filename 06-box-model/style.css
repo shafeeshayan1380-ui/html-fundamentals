@@ -1,0 +1,78 @@
+/* Exercise 06 - Box Model and Display */
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #b4d7d7;
+
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: #7cc0df;
+    padding: 15px;
+}
+
+section {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+h2, h3 {
+    color: #243b53;
+}
+
+/* Navigation */
+
+nav li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 15px;
+    border: 2px solid #243b53;
+    border-radius: 5px;
+}
+
+/* Hover and Focus */
+
+a:hover {
+    color: red;
+}
+
+nav a:focus {
+    outline: 3px solid orange;
+    outline-offset: 3px;
+}
+
+/* Pseudo-classes */
+
+.skills li:nth-child(2) {
+    font-style: italic;
+}
+
+.skills li:not(:first-child) {
+    margin-top: 5px;
+}
+
+/* Profile Image */
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    border: 3px solid #243b53;
+}
